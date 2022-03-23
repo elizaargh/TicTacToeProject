@@ -1,7 +1,19 @@
 console.log('TTT DOM IS ON!!')
 
-const button = $('button');
-button.on('click', newArray)
+// const button = $('.ticktackers');
+// button.on('click', console.log('help'))
+
+// const start = $('#start');
+// start.on('click', )
+
+// const choiceOfButton = function (){
+//     let iChooseYou = buttonID.on('click');
+//     if (playerOne = true); {
+//         hold[IDindex] = 'X';
+//     } else {
+//         hold[IDindex] = 'O'}
+// }
+// }
 
 // const oneButton = $('#one')
 // oneButton.on('click', buttonClick);
