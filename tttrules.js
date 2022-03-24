@@ -9,7 +9,7 @@ ticktackerButton.on('click', console.log('help', ));
 let values = ['0', '1', '2', '3', '4', '5', '6', '7','8'];
 // let turn counter = 0 ; count up to 9 = 9 it has to be a tie. 
 
-let draw = function (){
+const draw = function (){
     // for (let i = 0; i < values.length; i++) {
      if (values[0] === '0'){
       //  console.log('do nothing')
@@ -29,7 +29,7 @@ let draw = function (){
                   // console.log('do nothing')
     } else if (values[8] === '8'){
               // console.log('do nothing')
-                    } else {console.log('its a draw work')}
+                    } else { return true }
 
 };
 // in click function. just add 1++ / add else if. is it [8] or [9]
@@ -105,27 +105,58 @@ let moBoxesMoShadows = function (){
   $('.cube').css('visibility', 'hidden');
   $('.cube_shadow').css({'visibility': 'hidden', 'transition': 'none'});
   //i want to slow the text down
-  $('#0').text('T');
-  $('#0').css({'color': 'red', 'transition': '1s'})
-  $('#1').text('I');
+  // $('#0').text('T');
+  $("#0").fadeOut(function() {
+    $(this).text("T").fadeIn(4000);
+  });
+  $('#0').css({'color': 'red', 'transition': '2s'})
+  // $('#1').text('I');
+  $("#1").fadeOut(function() {
+    $(this).text("I").fadeIn(5000);
+  });
   $('#1').css({'color': '#fc03a1', 'transition': '1s'})
-  $('#2').text('C');
-  $('#2').css({'color': '#fc5e03', 'transition': '1s'})
+  // $('#2').text('C');
+  $("#2").fadeOut(function() {
+    $(this).text("C").fadeIn(6000);
+  });
+  $('#2').css({'color': '#fc5e03', 'transition': '2s'})
 
-  $('#3').text('T');
-  $('#3').css({'color': '#fca903', 'transition': '.5s'})
-  $('#4').text('A');
-  $('#4').css({'color': '#39fc03', 'transition': '.5s'})
-  $('#5').text('C');
-  $('#5').css({'color': '#03fcd7', 'transition': '.5s'})
+  // $('#3').text('T');  
+  $("#3").fadeOut(function() {
+  $(this).text("T").fadeIn(4000);
+});
+  $('#3').css({'color': '#fca903', 'transition': '2s'})
 
-  $('#6').text('T');
-  $('#6').css({'color': 'skyblue', 'transition': '.2s'})
-  $('#7').text('0');
-  $('#7').css({'color': 'orange', 'transition': '.2s'})
-  $('#8').text('E');
-  $('#8').css({'color': 'pink', 'transition': '.2s'})
-};
+  // $('#4').text('A');
+  $("#4").fadeOut(function() {
+    $(this).text("A").fadeIn(5000);
+  });
+  $('#4').css({'color': '#39fc03', 'transition': '2s'})
+
+  // $('#5').text('C');
+  $("#5").fadeOut(function() {
+    $(this).text("C").fadeIn(6000);
+  });
+  $('#5').css({'color': '#03fcd7', 'transition': '2s'})
+
+  // $('#6').text('T');
+  $("#6").fadeOut(function() {
+    $(this).text("T").fadeIn(4000);
+  });
+  $('#6').css({'color': 'skyblue', 'transition': '2s'})
+
+  // $('#7').text('0');
+  $("#7").fadeOut(function() {
+    $(this).text("O").fadeIn(5000);
+  });
+  $('#7').css({'color': 'orange', 'transition': '2s'})
+
+  // $('#8').text('E');
+  $("#8").fadeOut(function() {
+    $(this).text("E").fadeIn(6000);
+  });
+  $('#8').css({'color': 'pink', 'transition': '2s'})
+  };
 
 
 updateButtonValue();
@@ -180,10 +211,66 @@ const checkWin = function (){
         $('.winner').css('visibility', 'visible');
         $('.winner').text(values[6] + ' wins!');
         moBoxesMoShadows();
-      } else if (draw());
+      } else if ( draw()){
+        $('.winner').css('visibility', 'visible');
+        $('.winner').text('Draw!');
+        //draw sad colors. sorry ran out of time
+        $("#0").fadeOut(function() {
+          $(this).text("G").fadeIn(4000);
+        });
+        $('#0').css({'color': 'blue', 'transition': '2s'})
+        // $('#1').text('I');
+        $("#1").fadeOut(function() {
+          $(this).text("A").fadeIn(4000);
+        });
+        $('#1').css({'color': 'blue', 'transition': '2s'})
+        // $('#2').text('C');
+        $("#2").fadeOut(function() {
+          $(this).text("M").fadeIn(4000);
+        });
+        $('#2').css({'color': 'blue', 'transition': '2s'})
+      
+        // $('#3').text('T');  
+        $("#3").fadeOut(function() {
+        $(this).text("E").fadeIn(4000);
+      });
+        $('#3').css({'color': 'blue', 'transition': '2s'})
+      
+        // $('#4').text('A');
+        $("#4").fadeOut(function() {
+          $(this).text("O").fadeIn(4000);
+        });
+        $('#4').css({'color': 'red', 'transition': '2s'})
+      
+        // $('#5').text('C');
+        $("#5").fadeOut(function() {
+          $(this).text("V").fadeIn(4000);
+        });
+        $('#5').css({'color': 'red', 'transition': '2s'})
+      
+        // $('#6').text('T');
+        $("#6").fadeOut(function() {
+          $(this).text("E").fadeIn(4000);
+        });
+        $('#6').css({'color': 'red', 'transition': '2s'})
+      
+        // $('#7').text('0');
+        $("#7").fadeOut(function() {
+          $(this).text("R").fadeIn(5000);
+        });
+        $('#7').css({'color': 'red', 'transition': '2s'})
+      
+        // $('#8').text('E');
+        $("#8").fadeOut(function() {
+          $(this).text(".").fadeIn(6000);
+        });
+        $('#8').css({'color': 'pink', 'transition': '2s'})
+        };
+      };
+       
     
   
-};
+// };
   
      
 
