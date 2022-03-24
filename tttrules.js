@@ -104,6 +104,18 @@ let moBoxesMoShadows = function (){
   //removeBox
   $('.cube').css('visibility', 'hidden');
   $('.cube_shadow').css({'visibility': 'hidden', 'transition': 'none'});
+
+  $('#0').text('Y');
+  $('#1').text('O');
+  $('#2').text('U');
+
+  $('#3').text('W');
+  $('#4').text('I');
+  $('#5').text('N');
+
+  $('#6').text('X');
+  $('#7').text('0');
+  $('#8').text('X');
 };
 
 
@@ -129,6 +141,7 @@ const checkWin = function (){
         // console.log(values[0] + ' wins!');
          $('.winner').css('visibility', 'visible');
          moBoxesMoShadows();
+
       } else if (rowTwo) {
         $('.winner').css('visibility', 'visible');
         moBoxesMoShadows();
@@ -146,7 +159,7 @@ const checkWin = function (){
         moBoxesMoShadows();
       }  else if (diagonalTop){
         $('.winner').css('visibility', 'visible');
-        moBoxesMoShadows();
+         moBoxesMoShadows();
       }  else if (diagonalBottom){
         $('.winner').css('visibility', 'visible');
         moBoxesMoShadows();
