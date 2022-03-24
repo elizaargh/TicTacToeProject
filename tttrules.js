@@ -10,7 +10,7 @@ let values = ['0', '1', '2', '3', '4', '5', '6', '7','8'];
 // let turn counter = 0 ; count up to 9 = 9 it has to be a tie. 
 
 let draw = function (){
-    for (let i = 0; i < values.length; i++) {
+    // for (let i = 0; i < values.length; i++) {
      if (values[0] === '0'){
       //  console.log('do nothing')
     } else if (values[1] === '1'){
@@ -30,7 +30,7 @@ let draw = function (){
     } else if (values[8] === '8'){
               // console.log('do nothing')
                     } else { console.log("It's a DRAW!!!")}
-  }
+
 };
 // in click function. just add 1++ / add else if. is it [8] or [9]
 
