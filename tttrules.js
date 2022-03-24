@@ -29,7 +29,7 @@ let draw = function (){
                   // console.log('do nothing')
     } else if (values[8] === '8'){
               // console.log('do nothing')
-                    } else { console.log("It's a DRAW!!!")}
+                    } else {console.log('its a draw work')}
 
 };
 // in click function. just add 1++ / add else if. is it [8] or [9]
@@ -104,18 +104,27 @@ let moBoxesMoShadows = function (){
   //removeBox
   $('.cube').css('visibility', 'hidden');
   $('.cube_shadow').css({'visibility': 'hidden', 'transition': 'none'});
+  //i want to slow the text down
+  $('#0').text('T');
+  $('#0').css({'color': 'red', 'transition': '1s'})
+  $('#1').text('I');
+  $('#1').css({'color': '#fc03a1', 'transition': '1s'})
+  $('#2').text('C');
+  $('#2').css({'color': '#fc5e03', 'transition': '1s'})
 
-  $('#0').text('Y');
-  $('#1').text('O');
-  $('#2').text('U');
+  $('#3').text('T');
+  $('#3').css({'color': '#fca903', 'transition': '.5s'})
+  $('#4').text('A');
+  $('#4').css({'color': '#39fc03', 'transition': '.5s'})
+  $('#5').text('C');
+  $('#5').css({'color': '#03fcd7', 'transition': '.5s'})
 
-  $('#3').text('W');
-  $('#4').text('I');
-  $('#5').text('N');
-
-  $('#6').text('X');
+  $('#6').text('T');
+  $('#6').css({'color': 'skyblue', 'transition': '.2s'})
   $('#7').text('0');
-  $('#8').text('X');
+  $('#7').css({'color': 'orange', 'transition': '.2s'})
+  $('#8').text('E');
+  $('#8').css({'color': 'pink', 'transition': '.2s'})
 };
 
 
@@ -140,28 +149,36 @@ const checkWin = function (){
     if (rowOne){
         // console.log(values[0] + ' wins!');
          $('.winner').css('visibility', 'visible');
+         $('.winner').text(values[0] + ' wins!');
          moBoxesMoShadows();
 
       } else if (rowTwo) {
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[3] + ' wins!');
         moBoxesMoShadows();
       } else if (rowThree){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[6] + ' wins!');
         moBoxesMoShadows();
       }  else if (columnA){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[0] + ' wins!');
         moBoxesMoShadows();
       }  else if (columnB){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[1] + ' wins!');
         moBoxesMoShadows();
       }  else if (columnC){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[2] + ' wins!');
         moBoxesMoShadows();
       }  else if (diagonalTop){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[0] + ' wins!');
          moBoxesMoShadows();
       }  else if (diagonalBottom){
         $('.winner').css('visibility', 'visible');
+        $('.winner').text(values[6] + ' wins!');
         moBoxesMoShadows();
       } else if (draw());
     
