@@ -212,7 +212,7 @@ const checkWin = function (){
         $('.winner').text(values[6] + ' wins!');
         moBoxesMoShadows();
       } else if ( draw()){
-        $('.winner').css('visibility', 'visible');
+        $('.winner').css({'visibility': 'visible', 'color': 'skyblue'});
         $('.winner').text('Draw!');
         //draw sad colors. sorry ran out of time
         $("#0").fadeOut(function() {
